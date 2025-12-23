@@ -1,0 +1,5 @@
+[phases.build]
+cmds = ["mvn -q -DskipTests package"]
+
+[start]
+cmd = "sh -c 'java -Dserver.port=${PORT} -jar $(ls target/*.jar | head -n 1)'"
